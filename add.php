@@ -9,11 +9,12 @@
 
 	<select name="day">
 <?php
-  for ($i = 0; $i <= 30; ++$i) {
-    $day = strtotime(sprintf('-%d days',$i));
-    $value = date('d', $day);
-    $label = $value;
-    printf('<option value="%s">%s</option>', $value, $label);
+  for ($i = 1; $i <= 31; ++$i) {
+
+    // $day = strtotime(sprintf('-%d days',$i));
+    // $value = date('d', $day);
+    // $label = $value;
+    printf('<option value="%s">%s</option>', $i, $i);
   }
   ?>
 	</select>
@@ -21,11 +22,11 @@
 
 	<select name="month">
 <?php
-  for ($i = 0; $i <= 11; ++$i) {
-    $time = strtotime(sprintf('-%d months',$i));
-    $value = date('m', $time);
-    $label = date('F ', $time);
-    printf('<option value="%s">%s</option>', $value, $label);
+  for ($i = 1; $i <= 12; ++$i) {
+    // $time = strtotime(sprintf('-%d months',$i));
+    // $value = date('m', $time);
+    // $label = date('F ', $time);
+    printf('<option value="%s">%s</option>', $i, $i);
   }
   ?>
 	</select>

@@ -8,9 +8,9 @@ $month = $_POST['month'];
 $year = $_POST['year'];
 $id = $_POST['id'];
 
-$sql = "UPDATE birthdays SET $person, $day, $month, $year WHERE id = '$id' ";
-$query = mysqli_query($con, $sql);
+$sql = "UPDATE birthdays SET person='" . $person . "', day='" . $day . "', month='" . $month . "', year='" . $year . "' WHERE id ='" . $id . "' ";
 
+$query = mysqli_query($con, $sql);
 header('Location: index.php');
 
 ?>
